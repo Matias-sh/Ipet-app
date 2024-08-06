@@ -26,41 +26,26 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="200dp"
-        android:layout_height="200dp"
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginBottom="400dp"
+        android:elevation="3dp"
+        android:src="@drawable/ic_ipet"
         android:layout_centerInParent="true"
-        android:layout_marginBottom="350dp"
-        app:cardCornerRadius="100dp"
-        app:cardElevation="6dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/perrito" />
-
-        </LinearLayout>
-
-
-    </androidx.cardview.widget.CardView>
-
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/background_rose" />
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="200dp"
         android:layout_marginEnd="50dp"
-        android:layout_marginBottom="100dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginBottom="150dp"
         android:backgroundTint="@color/cardview_dark_background"
         app:cardCornerRadius="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -72,10 +57,10 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginStart="50dp"
-            android:layout_marginTop="80dp"
+            android:layout_marginTop="160dp"
             android:layout_marginEnd="50dp"
-            android:layout_marginBottom="0dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginBottom="50dp"
             android:gravity="center"
             android:orientation="vertical"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -93,16 +78,16 @@
 
             -->
 
-            <TextView
+            <EditText
                 android:id="@+id/etUsername"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_marginBottom="100dp"
-                android:gravity="center"
-                android:text="Roberto"
-                android:textColor="@color/purple_200"
-                android:textColorHint="@color/white"
-                android:textSize="20dp" />
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="50dp"
+                android:hint="Usuario"
+                android:inputType="textPersonName"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white" />
 
             <!--
             <TextView
@@ -114,52 +99,30 @@
                 android:textSize="16sp" />
             -->
 
-            <TextView
+            <EditText
+                android:id="@+id/etPassword"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="10dp"
-                android:text="Edad: 2 años"
+                android:layout_height="50dp"
+                android:hint="Contraseña"
+                android:inputType="textPassword"
                 android:textColor="@color/white"
                 android:textColorHint="@color/white" />
 
-            <TextView
-                android:layout_width="match_parent"
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="10dp"
-                android:text="Raza: No se"
+                android:layout_marginTop="50dp"
+                android:background="#BF4E86"
+                android:text="Login"
                 android:textColor="@color/white"
-                android:textColorHint="@color/white" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="10dp"
-                android:text="Altura: 20cm"
-                android:textColor="@color/white"
-                android:textColorHint="@color/white" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="10dp"
-                android:text="Comida Favorita: Milanesas"
-                android:textColor="@color/white"
-                android:textColorHint="@color/white" />
-
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent" />
 
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
-
-    <Button
-        android:id="@+id/btnLoggout"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:layout_marginEnd="15dp"
-        android:text="Cerrar sesión"
-        android:textSize="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
